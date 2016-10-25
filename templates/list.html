@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Records
+{% endblock %}
+
+{% block body_block %}
+    <div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                </tr>
+                {% for contact in object_list %}
+                    <tr>
+                        <th>{{ contact.first_name }}</th>
+                        <th>{{ contact.last_name }}</th>
+                        <th>{{ contact.email }}</th>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    <a href="{% url 'contacts-new' %}">Add new</a>
+{% endblock %}

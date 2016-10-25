@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    Index Page
+{% endblock %}
+
+{% block body_block %}
+    <div>
+        <p class="lead">
+            A simple site for Python-Django app, built by Daniel Ale
+        </p>
+        <p><a class="btn btn-lg btn-success" href="{% url 'contacts-new' %}" role="button">Add New Contact</a> </p>
+    </div>
+{% endblock %}
