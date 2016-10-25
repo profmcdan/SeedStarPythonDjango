@@ -20,6 +20,6 @@ from seedstar_test import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^list/$', views.ListContactView.as_view(), name='list'),
-    url(r'^new/$', views.CreateContactView.as_view(), name='contacts-new'),
+    url(r'^add/$', views.CreateContactView.as_view(), name='contacts-new'),
     url(r'^$', views.index, name='index'),
 ]
