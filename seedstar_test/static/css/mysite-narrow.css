@@ -31,6 +31,10 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+tbody tr:hover{
+  background: #28a4c9;
+}
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
@@ -49,6 +53,10 @@ body {
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+}
+
+.jumbotron form{
+  text-align: left;
 }
 
 /* Supporting marketing content */

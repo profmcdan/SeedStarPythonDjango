@@ -6,13 +6,28 @@
 
 {% block body_block %}
     <div>
-        <h3>Add Contact</h3>
+        <p>Fill this smart form to add a new contact to the list...</p>
         <form action="{% url "contacts-new" %}" method="post" class="form-horizontal">
             {% csrf_token %}
-            <div class="table">
-                {{ form.as_p }}
+            <div class="myField">
+                {{ form.non_field_errors }}
+                <div class="fieldWrapper" style="align-content: stretch">
+                    {{ form.first_name.errors }}
+                    <p>{{ form.first_name.label_tag }} </p>
+                    <p>{{ form.first_name }}</p>
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.last_name.errors }}
+                    <p>{{ form.last_name.label_tag }}</p>
+                    <p>{{ form.last_name }}</p>
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.email.errors }}
+                    <p>{{ form.email.label_tag }}</p>
+                    <p>{{ form.email }}</p>
+                </div>
             </div>
-            <input id="save_contact" type="submit" value="Save">
+            <input class="btn-lg" id="save_contact" type="submit" value="Submit now">
         </form>
         <a href="{% url "list"  %}">Back to list</a>
     </div>

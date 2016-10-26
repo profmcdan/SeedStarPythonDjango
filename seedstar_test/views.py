@@ -13,6 +13,7 @@ class ListContactView(ListView):
     template_name = 'list.html'
 
 
+
 class CreateContactView(CreateView):
     model = Contact
     template_name = 'add_contact.html'
